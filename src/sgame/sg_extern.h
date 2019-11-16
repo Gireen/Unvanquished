@@ -169,6 +169,13 @@ extern  vmCvar_t g_debugEntities;
 
 extern  vmCvar_t g_instantBuilding;
 
+extern  Cvar::Callback<Cvar::Cvar<std::string>> g_servertext1;
+extern  Cvar::Callback<Cvar::Cvar<std::string>> g_servertext2;
+extern  Cvar::Callback<Cvar::Cvar<std::string>> g_servertext3;
+extern  Cvar::Callback<Cvar::Cvar<std::string>> g_servertext4;
+extern  Cvar::Callback<Cvar::Cvar<std::string>> g_servertext5;
+extern  Cvar::Callback<Cvar::Cvar<std::string>> g_servertext6;
+
 // bot buy cvars
 extern vmCvar_t g_bot_buy;
 extern vmCvar_t g_bot_rifle;

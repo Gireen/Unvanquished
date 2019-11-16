@@ -3446,6 +3446,42 @@ static void CG_Rocket_DrawMOTD()
 	Rocket_SetInnerRML( parsed, RP_EMOTICONS );
 }
 
+static void CG_Rocket_DrawSERVERTEXT1()
+{
+	const char *s;
+	s = CG_ConfigString( CS_SERVERTEXT1 );
+	Rocket_SetInnerRML( s, 0 );
+}
+static void CG_Rocket_DrawSERVERTEXT2()
+{
+	const char *s;
+	s = CG_ConfigString( CS_SERVERTEXT2 );
+	Rocket_SetInnerRML( s , 0 );
+}
+static void CG_Rocket_DrawSERVERTEXT3()
+{
+	const char *s;
+	s = CG_ConfigString( CS_SERVERTEXT3 );
+	Rocket_SetInnerRML( s , 0 );
+}
+static void CG_Rocket_DrawSERVERTEXT4()
+{
+	const char *s;
+	s = CG_ConfigString( CS_SERVERTEXT4 );
+	Rocket_SetInnerRML( s , 0 );
+}
+static void CG_Rocket_DrawSERVERTEXT5()
+{
+	const char *s;
+	s = CG_ConfigString( CS_SERVERTEXT5 );
+	Rocket_SetInnerRML( s , 0 );
+}
+static void CG_Rocket_DrawSERVERTEXT6()
+{
+	const char *s;
+	s = CG_ConfigString( CS_SERVERTEXT6 );
+	Rocket_SetInnerRML( s , 0 );
+}
 static void CG_Rocket_DrawHostname()
 {
 	const char *info;
@@ -3603,6 +3639,12 @@ static const elementRenderCmd_t elementRenderCmdList[] =
 	{ "motd", &CG_Rocket_DrawMOTD, ELEMENT_ALL },
 	{ "numSpawns", &CG_Rocket_DrawNumSpawns, ELEMENT_DEAD },
 	{ "progress_value", &CG_Rocket_DrawProgressValue, ELEMENT_ALL },
+	{ "servertext1", &CG_Rocket_DrawSERVERTEXT1, ELEMENT_ALL },
+	{ "servertext2", &CG_Rocket_DrawSERVERTEXT2, ELEMENT_ALL },
+	{ "servertext3", &CG_Rocket_DrawSERVERTEXT3, ELEMENT_ALL },
+	{ "servertext4", &CG_Rocket_DrawSERVERTEXT4, ELEMENT_ALL },
+	{ "servertext5", &CG_Rocket_DrawSERVERTEXT5, ELEMENT_ALL },
+	{ "servertext6", &CG_Rocket_DrawSERVERTEXT6, ELEMENT_ALL },
 	{ "spawnPos", &CG_Rocket_DrawSpawnQueuePosition, ELEMENT_DEAD },
 	{ "stamina_bolt", &CG_Rocket_DrawStaminaBolt, ELEMENT_HUMANS },
 	{ "tutorial", &CG_Rocket_DrawTutorial, ELEMENT_GAME },

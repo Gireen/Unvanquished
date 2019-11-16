@@ -1054,6 +1054,13 @@ void SP_worldspawn()
 
 	trap_SetConfigstring( CS_MOTD, g_motd.string );  // message of the day
 
+	trap_SetConfigstring( CS_SERVERTEXT1, g_servertext1.Get().c_str() );
+	trap_SetConfigstring( CS_SERVERTEXT2, g_servertext2.Get().c_str() );
+	trap_SetConfigstring( CS_SERVERTEXT3, g_servertext3.Get().c_str() );
+	trap_SetConfigstring( CS_SERVERTEXT4, g_servertext4.Get().c_str() );
+	trap_SetConfigstring( CS_SERVERTEXT5, g_servertext5.Get().c_str() );
+	trap_SetConfigstring( CS_SERVERTEXT6, g_servertext6.Get().c_str() );
+
 	G_SpawnStringIntoCVarIfSet( "gravity", "g_gravity" );
 
 	G_SpawnStringIntoCVarIfSet( "humanBuildPoints", "g_humanBuildPoints" );

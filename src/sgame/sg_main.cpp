@@ -193,6 +193,14 @@ vmCvar_t           g_emptyTeamsSkipMapTime;
 
 Cvar::Cvar<bool>   g_neverEnd("g_neverEnd", "cheat to never end a game, helpful to load a map without spawn for testing purpose", Cvar::NONE, false);
 
+Cvar::Callback<Cvar::Cvar<std::string>>   g_servertext1("g_servertext1","",Cvar::NONE,"",[]( std::string message ) {trap_SetConfigstring( CS_SERVERTEXT1, message.c_str() );});
+Cvar::Callback<Cvar::Cvar<std::string>>   g_servertext2("g_servertext2","",Cvar::NONE,"",[]( std::string message ) {trap_SetConfigstring( CS_SERVERTEXT2, message.c_str() );});
+Cvar::Callback<Cvar::Cvar<std::string>>   g_servertext3("g_servertext3","",Cvar::NONE,"",[]( std::string message ) {trap_SetConfigstring( CS_SERVERTEXT3, message.c_str() );});
+Cvar::Callback<Cvar::Cvar<std::string>>   g_servertext4("g_servertext4","",Cvar::NONE,"",[]( std::string message ) {trap_SetConfigstring( CS_SERVERTEXT4, message.c_str() );});
+Cvar::Callback<Cvar::Cvar<std::string>>   g_servertext5("g_servertext5","",Cvar::NONE,"",[]( std::string message ) {trap_SetConfigstring( CS_SERVERTEXT5, message.c_str() );});
+Cvar::Callback<Cvar::Cvar<std::string>>   g_servertext6("g_servertext6","",Cvar::NONE,"",[]( std::string message ) {trap_SetConfigstring( CS_SERVERTEXT6, message.c_str() );});
+
+
 // <bot stuff>
 
 // bot buy cvars
