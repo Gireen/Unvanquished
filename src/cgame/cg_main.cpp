@@ -1111,25 +1111,12 @@ static void CG_RegisterGraphics()
 	}
 
 	// player health cross shaders
-	cgs.media.healthCross = trap_R_RegisterShader("ui/assets/neutral/cross",
-						      (RegisterShaderFlags_t) RSF_DEFAULT);
-	cgs.media.healthCross2X = trap_R_RegisterShader("ui/assets/neutral/cross2",
-							(RegisterShaderFlags_t) RSF_DEFAULT);
-	cgs.media.healthCross3X = trap_R_RegisterShader("ui/assets/neutral/cross3",
-							(RegisterShaderFlags_t) RSF_DEFAULT);
-	cgs.media.healthCrossMedkit = trap_R_RegisterShader("ui/assets/neutral/cross_medkit",
-							    (RegisterShaderFlags_t) RSF_DEFAULT);
-	cgs.media.healthCrossPoisoned = trap_R_RegisterShader("ui/assets/neutral/cross_poison",
-							      (RegisterShaderFlags_t) RSF_DEFAULT);
-
-	cgs.media.desaturatedCgrade = trap_R_RegisterShader("gfx/cgrading/desaturated",
-								 (RegisterShaderFlags_t) ( RSF_NOMIP | RSF_NOLIGHTSCALE ) );
-
-	cgs.media.neutralCgrade = trap_R_RegisterShader("gfx/cgrading/neutral",
-								 (RegisterShaderFlags_t) ( RSF_NOMIP | RSF_NOLIGHTSCALE ) );
-
-	cgs.media.redCgrade = trap_R_RegisterShader("gfx/cgrading/red-only",
-								 (RegisterShaderFlags_t) ( RSF_NOMIP | RSF_NOLIGHTSCALE ) );
+	cgs.media.healthCross = trap_R_RegisterShader("ui/assets/neutral/cross", RSF_DEFAULT);
+	cgs.media.healthCross2X = trap_R_RegisterShader("ui/assets/neutral/cross2", RSF_DEFAULT);
+	cgs.media.healthCross3X = trap_R_RegisterShader("ui/assets/neutral/cross3", RSF_DEFAULT);
+	cgs.media.healthCross4X = trap_R_RegisterShader("ui/assets/neutral/cross4", RSF_DEFAULT);
+	cgs.media.healthCrossMedkit = trap_R_RegisterShader("ui/assets/neutral/cross_medkit", RSF_DEFAULT);
+	cgs.media.healthCrossPoisoned = trap_R_RegisterShader("ui/assets/neutral/cross_poison", RSF_DEFAULT);
 
 	cgs.media.tealCgrade = trap_R_RegisterShader("gfx/cgrading/teal-only",
 								 (RegisterShaderFlags_t) ( RSF_NOMIP | RSF_NOLIGHTSCALE ) );
