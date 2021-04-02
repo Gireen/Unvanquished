@@ -1237,8 +1237,14 @@ const char *ClientConnect( int clientNum, bool firstTime )
 
 		if ( !( g_entities[i].r.svFlags & SVF_BOT ) && !Q_stricmp( client->pers.guid, level.clients[ i ].pers.guid ) )
 		{
+
 			if ( !G_ClientIsLagging( level.clients + i ) )
 			{
+				G_LogPrintf( "Duplicate GUID: %i", i );
+				G_LogPrintf( "FailedConnecting: %i [%s] (%s) \"%s^*\" \"%s^*\"",
+				             clientNum, client->pers.ip.str[0] ? client->pers.ip.str : "127.0.0.1", client->pers.guid,
+				             client->pers.netname,
+				             client->pers.netname );
 				trap_SendServerCommand( i, "cp \"Your GUID is not secure\"" );
 				return "Duplicate GUID";
 			}
